@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 使用最高版本ie,Chrome渲染 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="hotcss" content="initial-dpr=1">
+  <meta name="nightmode" content="disable" />
+  <!-- <meta name="browsermode" content="application"/> -->
+  <!-- 设置页面缩放 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+  <!-- 禁用手机自动将网页中的电话号码显示为拨号的超链接 -->
+  <meta name="format-detection" content="telephone=no" />
+  <title>站点2</title>
+  <% for (var css in htmlWebpackPlugin.files.css) { %>
+  <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+  <% } %>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+  <script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %>
+</body>
+
+</html>

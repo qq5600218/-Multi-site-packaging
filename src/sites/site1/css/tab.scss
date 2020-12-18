@@ -1,0 +1,35 @@
+.tab {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 9000;
+  color: #797979;
+  border-top: 1px solid #ddd;
+  /* no */
+  background-color: #fff;
+  ul {
+    display: flex;
+    height: 100%;
+    li {
+      flex: 1;
+      padding-top: 10px;
+      .tab-scale {
+        flex-direction: column;
+        height: 100%;
+        >div {
+          flex: 1;
+          justify-content: space-around;
+        }
+        span {
+          flex: 1;
+          font-size: 32px;
+        }
+        img {
+          width: 49px;
+        }
+      }
+    }
+  }
+}
